@@ -884,16 +884,6 @@ function displayPokemon(){
                 toggleCols();
             }
         });
-        $("tbody tr").attr("title", "Click to " + (isForIndividualPokemon ? "display more information and" : '') + " add to Reddit table.");
-        if (isForIndividualPokemon) {
-            $("body").addClass("shiny");
-            $("th.ivs").append(" / <abbr title=\"Effort Values\">EVs</abbr>");
-            $("th.egg-moves").text("Moves");
-            $("#modal").click(function() {
-                $(this).addClass("hidden");
-                clearModal();
-                $(document).unbind("keydown");
-            });
             $(".carousel a").click(function(e) {
                 e.preventDefault();
                 clearModal();
